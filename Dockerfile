@@ -1,11 +1,13 @@
-FROM alphine:latest
+FROM alpine:latest
 
 COPY . /app
 
 RUN apk install python3 & \
     apk install requirements.txt
 
-CMD [ ]
+EXPOSE 80
+
+CMD [ "run app.py" ]
 
     
 
